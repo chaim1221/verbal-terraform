@@ -6,3 +6,23 @@ provider "oci" {
   private_key_path = "${var.private_key_path}"
   region = "${var.region}"
 }
+
+output "tenancy_ocid" {
+  value = "${var.tenancy_ocid}"
+}
+
+output "user_ocid" {
+  value = "${var.user_ocid}"
+}
+
+output "fingerprint" {
+  value = "${var.fingerprint}"
+}
+
+output "private_key_path" {
+  value = "${var.private_key_path}"
+}
+
+output "region" {
+  value = "${var.region}"
+}
