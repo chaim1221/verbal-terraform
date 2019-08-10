@@ -1,0 +1,10 @@
+{
+  "variable": {
+    "release_versions": {
+      "type": "map",
+      "default": {
+        "verbal-cloud": "0.0.1"
+      }
+    }
+  }
+}

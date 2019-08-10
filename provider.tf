@@ -7,22 +7,22 @@ provider "oci" {
   region = "${var.region}"
 }
 
-output "tenancy_ocid" {
-  value = "${var.tenancy_ocid}"
+output "version" {
+  value = "Verbal Cloud version ${var.release_versions["verbal-cloud"]}"
 }
-
-output "user_ocid" {
-  value = "${var.user_ocid}"
-}
-
-output "fingerprint" {
-  value = "${var.fingerprint}"
-}
-
-output "private_key_path" {
-  value = "${var.private_key_path}"
-}
-
-output "region" {
-  value = "${var.region}"
-}
+# # Debugging
+# output "tenancy_ocid" {
+#   value = "${var.tenancy_ocid}"
+# }
+# output "user_ocid" {
+#   value = "${var.user_ocid}"
+# }
+# output "fingerprint" {
+#   value = "${var.fingerprint}"
+# }
+# output "private_key_path" {
+#   value = "${var.private_key_path}"
+# }
+# output "region" {
+#   value = "${var.region}"
+# }
