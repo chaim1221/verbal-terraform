@@ -34,10 +34,45 @@ variable "aws_compat_credentials_file" {
 
 # https://tools.ietf.org/html/rfc5737
 variable "verbal_ssh_ip" {
-  default = "203.0.113.2"
+  default = "198.51.100.2"
 }
 
 # TODO parameterize for deploy, or use env var
 variable "verbal_ssh_domain" {
   default = "verbal.cloud"
+}
+
+# https://tools.ietf.org/html/rfc5737
+variable "verbal_api_ip" {
+  default = "203.0.113.2"
+}
+
+# TODO parameterize for deploy, or use env var
+variable "verbal_api_domain" {
+  default = "verbalapi.site"
+}
+
+# https://tools.ietf.org/html/rfc5737
+variable "verbal_chat_ip" {
+  default = "203.0.113.3"
+}
+
+# TODO parameterize for deploy, or use env var
+variable "verbal_chat_domain" {
+  default = "verbalchat.site"
+}
+
+# for use by the ALBs
+variable "public_subnet_cidr_block" {
+  default = "192.168.0.0/24"
+}
+
+# for use by the bastion
+variable "private_subnet_cidr_block" {
+  default = "10.0.0.0/24"
+}
+
+# if follows AWS pattern, not really used
+variable "vcn_cidr_block" {
+  default = "172.16.0.0/24"
 }

@@ -33,3 +33,27 @@ resource "oci_dns_record" "verbal_ssh" {
     rdata = "${var.verbal_ssh_ip}"
     ttl = "${var.verbal_ssh_ttl}"
 }
+
+resource "oci_dns_record" "verbal_api" {
+    #Required
+    zone_name_or_id = "${var.cloud_zone_name}"
+    domain = "${var.verbal_api_domain}"
+    rtype = "${var.verbal_api_rtype}"
+
+    #Optional
+    compartment_id = "${var.compartment_id}"
+    rdata = "${var.verbal_api_ip}"
+    ttl = "${var.verbal_api_ttl}"
+}
+
+resource "oci_dns_record" "verbal_chat" {
+    #Required
+    zone_name_or_id = "${var.cloud_zone_name}"
+    domain = "${var.verbal_chat_domain}"
+    rtype = "${var.verbal_chat_rtype}"
+
+    #Optional
+    compartment_id = "${var.compartment_id}"
+    rdata = "${var.verbal_chat_ip}"
+    ttl = "${var.verbal_chat_ttl}"
+}
