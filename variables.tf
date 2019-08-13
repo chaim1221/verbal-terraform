@@ -76,3 +76,15 @@ variable "private_subnet_cidr_block" {
 variable "vcn_cidr_block" {
   default = "172.16.0.0/24"
 }
+
+variable "engine_policy_description" {
+  default = "Policy for Oracle Container Engine as described in https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengpolicyconfig.htm#PolicyPrerequisitesService"
+}
+
+variable "engine_policy_name" {
+  default = "ContainerEnginePolicy"
+}
+
+variable "engine_policy_statements" {
+  default = [ "Allow service OKE to manage all-resources in tenancy" ]
+}
