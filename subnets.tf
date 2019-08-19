@@ -17,8 +17,9 @@ resource "oci_core_subnet" "public_subnet" {
     # security_list_ids = "${var.subnet_security_list_ids}"
 }
 
-resource "oci_core_subnet" "private_subnet" {
-    cidr_block = "${var.private_subnet_cidr_block}"
-    compartment_id = "${var.tenancy_ocid}"
-    vcn_id = "${oci_core_vcn.verbal_vcn.id}"
-}
+# ostensibly for SSH... skipping it
+# resource "oci_core_subnet" "private_subnet" {
+#     cidr_block = "${var.private_subnet_cidr_block}"
+#     compartment_id = "${var.tenancy_ocid}"
+#     vcn_id = "${oci_core_vcn.verbal_vcn.id}"
+# }

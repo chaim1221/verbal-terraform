@@ -1,8 +1,8 @@
 # Right NOW this only contains the Kubernetes engine policy, but
 # this SHOULD be a space for all compartment-specific identity traits
-module "identity-verbal" {
-  source                    = "./identity"
-  compartment_id            = "${var.tenancy_ocid}"
+module "identity_verbal" {
+  source             = "./identity"
+  compartment_id     = "${var.tenancy_ocid}"
   policy_description = "${var.engine_policy_description}"
   policy_name        = "${var.engine_policy_name}"
   policy_statements  = "${var.engine_policy_statements}"
@@ -16,3 +16,5 @@ module "identity-verbal" {
 # TODO group Robots (TODO import) _should_ have all the permissions it needs,
 # but if it does not we will need to write another policy; then the question
 # becomes, how to support multiple policies in the module? count:0?
+
+# see: https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengpolicyconfig.htm
